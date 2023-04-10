@@ -1,0 +1,144 @@
+{
+    "node_addr": "ws://${OTN_TRUSTED_NODE}",
+    "account": "market-maker",
+    "instance_lock": "otn/market-maker/main/lock",
+    "secrets": {
+        "vault": {
+            "approle": "otn",
+            "path": "otn/otn-market-maker/main/keys/"
+        }
+    },
+    "logger": {
+      "level": "debug",
+      "encoding": "console",
+      "disableCaller": true,
+      "encoderConfig": {
+         "messageKey": "short_message",
+         "stacktraceKey": "st",
+         "levelKey": "level",
+         "levelEncoder": "lowercase",
+         "timeKey": "ts",
+         "timeEncoder": "iso8601"
+      }
+    },
+    "fee_reserve": 100,
+    "price_provider": {
+        "cmc": {
+            "url": "",
+            "bulksize": 50,
+            "interval": "1m"
+        }
+    },
+    "markets": [
+        {
+            "base": "OTN",
+            "quote": "BTC",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 60000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "ETH",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 60000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "LTC",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "BCH",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "BTG",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "ZEC",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "ETC",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "OMG",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "TRX",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "OTN",
+            "quote": "EOS",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9000,
+            "orders": 3,
+            "spread_step": 0.02
+        },
+        {
+            "base": "BTC",
+            "quote": "ETH",
+            "spread": 0.05,
+            "threshold": 0.01,
+            "expiration": 120,
+            "amount": 9,
+            "orders": 3,
+            "spread_step": 0.02
+        }
+    ]
+}
